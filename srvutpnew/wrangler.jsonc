@@ -1,0 +1,47 @@
+{
+    "$schema": "node_modules/wrangler/config-schema.json",
+    "name": "srvutpnew",
+    "main": "src/index.ts",
+    "compatibility_date": "2025-10-24",
+    
+    "durable_objects": {
+        "bindings": [
+            {
+                "class_name": "LobbyV2",
+                "name": "LOBBY_V2"
+            },
+            {	
+                "class_name": "WebServerV2",
+                "name": "WEBSERVER_V2"
+            }
+        ]
+    },
+    "migrations": [
+        {
+            "new_sqlite_classes": [
+                "LobbyV2",
+                "WebServerV2"
+            ],
+            "tag": "v1"
+        }
+    ],
+    
+    "kv_namespaces": [
+      { "binding": "YOUR_PERKS", "id": "02e9d453ba354986894fc8cfeef8b8ac", "preview_id": "02e9d453ba354986894fc8cfeef8b8ac" },
+      { "binding": "YOUR_SKILLS", "id": "3a9670e0fb9c4c79a23851616b23f593", "preview_id": "3a9670e0fb9c4c79a23851616b23f593" },
+      { "binding": "YOUR_INVENTORY", "id": "63b9e39c6b3b4a79bcbe7514181e55bf", "preview_id": "63b9e39c6b3b4a79bcbe7514181e55bf" },
+      { "binding": "YOUR_STASH", "id": "ff58dd71df47423eac25468537965e59", "preview_id": "ff58dd71df47423eac25468537965e59" }
+    ],
+    
+    "d1_databases": [
+      {
+        "binding": "MY_DB",
+        "database_name": "srv_db",
+        "database_id": "5092a0a2-4ee0-497e-b4e7-4a635dbaa67f"
+      }
+    ],
+
+    "observability": {
+        "enabled": true
+    }
+}
