@@ -167,3 +167,15 @@ dist
 .env*
 !.env.example
 .wrangler/
+
+# Local scripts with secrets
+scripts/
+
+# Local databases
+*.sqlite
+*.db
+.d1/
+
+# OS files
+.DS_Store
+Thumbs.db
