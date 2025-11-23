@@ -169,7 +169,7 @@ dist
 .wrangler/
 
 # Local scripts with secrets
-scripts/
+# scripts/
 
 # Local databases
 *.sqlite
@@ -179,5 +179,3 @@ scripts/
 # OS files
 .DS_Store
 Thumbs.db
-
-.scripts

@@ -1,10 +1,9 @@
 
+const { HEADERS } = require('./config');
+
 fetch("https://srvutpnew.surviveutopia.workers.dev/lobby/connection", {
     method: "GET",
-    headers: {
-        "Authorization": "Umx25i9qGZXM8zy1p3H5vUAYwqZh40cJ59VNTzAx",
-        "Content-Type": "application/json",
-    },
+    headers: HEADERS,
 }).then(async function(res){
     console.log(await res.text());
 })

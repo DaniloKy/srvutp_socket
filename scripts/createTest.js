@@ -1,10 +1,9 @@
 
+const { HEADERS } = require('./config');
+
 fetch("http://127.0.0.1:8787/classes", {
     method: "POST",
-    headers: {
-        "Authorization": "Umx25i9qGZXM8zy1p3H5vUAYwqZh40cJ59VNTzAx",
-        "Content-Type": "application/json",
-    },
+    headers: HEADERS,
     body: JSON.stringify({
         name: "test",
         name_compiled: "test",

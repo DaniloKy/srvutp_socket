@@ -1,10 +1,9 @@
 
+const { HEADERS } = require('./config');
+
 fetch("https://srvutpnew.surviveutopia.workers.dev/classes", {
     method: "POST",
-    headers: {
-        "Authorization": "Umx25i9qGZXM8zy1p3H5vUAYwqZh40cJ59VNTzAx",
-        "Content-Type": "application/json",
-    },
+    headers: HEADERS,
     body: JSON.stringify({
         name: "Archer",
         name_compiled: "archer",
